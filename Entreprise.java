@@ -18,7 +18,6 @@ public class Entreprise {
         Membre membre=new Membre();
         
         membre.ajouterFichier();
-        membre.
     }
     
 }

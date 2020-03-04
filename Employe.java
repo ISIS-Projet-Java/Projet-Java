@@ -9,14 +9,15 @@ package entreprise;
  *
  * @author cgay
  */
-public class Employe {
+public class Employe implements Payable {
+
     protected String nom;
-     protected String prenom;
-     protected String Matricule;
-     protected int IndiceSal;
-     protected int Salaire;
-     protected int NbVente;
- 
+    protected String prenom;
+    protected String Matricule;
+    protected int IndiceSal;
+    protected int Salaire;
+    protected int NbVente;
+
     public Employe(String nom, String prenom, String Matricule, int IndiceSal) {
         this.nom = nom;
         this.prenom = prenom;
@@ -48,10 +49,20 @@ public class Employe {
         this.NbVente = NbVente;
     }
 
-
     @Override
     public String toString() {
         return "Employes{" + "nom=" + nom + ", prenom=" + prenom + ", Matricule=" + Matricule + ", IndiceSal=" + IndiceSal + ", Salaire=" + Salaire + ", NbVente=" + NbVente + '}';
     }
-    
+
+    @Override
+    public double calculerSalaire() {
+        if (this instanceof Commercial) {
+            Salaire = (int) (IndiceSal * 12 + 0.1 * this.NbVente);
+        } else {
+            Salaire = IndiceSal * 12;
+        }
+        return 0;
+    }
 }
+
+

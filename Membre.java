@@ -5,7 +5,6 @@
  */
 package entreprise;
 
-import static java.awt.PageAttributes.MediaType.A;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -14,8 +13,6 @@ import java.util.Scanner;
 import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static javafx.scene.input.KeyCode.A;
-import jdk.internal.org.objectweb.asm.tree.analysis.Value;
 
 /**
  *
