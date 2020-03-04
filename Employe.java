@@ -45,10 +45,6 @@ public class Employe implements Payable {
         this.Salaire = Salaire;
     }
 
-    public void setNbVente(int NbVente) {
-        this.NbVente = NbVente;
-    }
-
     @Override
     public String toString() {
         return "Employes{" + "nom=" + nom + ", prenom=" + prenom + ", Matricule=" + Matricule + ", IndiceSal=" + IndiceSal + ", Salaire=" + Salaire + ", NbVente=" + NbVente + '}';
@@ -63,6 +59,5 @@ public class Employe implements Payable {
         }
         return 0;
     }
+
 }
-
-

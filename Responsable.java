@@ -17,6 +17,28 @@ public class Responsable extends Employe{
         super(nom, prenom, Matricule, IndiceSal);
     }
     private TreeSet<Employe> lesSousEmployes;
-    
 
+   /*   @Override
+    public String toString() {
+        return "Responsable{" + "lesSousEmployes=" + lesSousEmployes + '}';
+    }
+
+    public TreeSet<Employe> getLesSousEmployes() {
+        return lesSousEmployes;
+    }
+
+    public void setLesSousEmployes(TreeSet<Employe> lesSousEmployes) {
+        this.lesSousEmployes = lesSousEmployes;
+    }
+
+    public int getNbVente() {
+        return NbVente;
+    }
+
+    public void setNbVente(int NbVente) {
+        this.NbVente = NbVente;
+    }
+
+    */
+    
 }

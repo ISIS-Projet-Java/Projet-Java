@@ -16,8 +16,10 @@ public class Entreprise {
      */
     public static void main(String[] args) {
         Membre membre=new Membre();
-        
+         
         membre.ajouterFichier();
+        System.out.println(membre);
+
     }
     
 }

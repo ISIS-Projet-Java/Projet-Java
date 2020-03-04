@@ -12,5 +12,4 @@ package entreprise;
  */
 public interface Payable {
         public abstract double calculerSalaire();
-        
 }
