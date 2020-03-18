@@ -11,12 +11,6 @@ package entreprise;
  * @author colin
  */
 public interface Payable {
-        public void CalculerSalaire(Employe a){
-        if (a.getClass().getSimpleName()=="Commercial"){
-            Salaire= (int) (IndiceSal * 12 + 0.1 * a.NbVente);}
-    else{
-            Salaire= IndiceSal * 12;
-    }
-    }
-         
+        public abstract double calculerSalaire();
+        
 }

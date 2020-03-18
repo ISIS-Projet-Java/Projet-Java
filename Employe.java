@@ -9,19 +9,21 @@ package entreprise;
  *
  * @author cgay
  */
-public class Employe {
+public class Employe implements Payable {
+
     protected String nom;
-     protected String prenom;
-     protected String Matricule;
-     protected int IndiceSal;
-     protected int Salaire;
-     protected int NbVente;
- 
-    public Employe(String nom, String prenom, String Matricule, int IndiceSal) {
+    protected String prenom;
+    protected String matricule;
+    protected int indiceSal;
+    protected int salaire;
+    protected int nbVente;
+
+    public Employe(String nom, String prenom, String matricule, int indiceSal) {
         this.nom = nom;
         this.prenom = prenom;
-        this.Matricule = Matricule;
-        this.IndiceSal = IndiceSal;
+        this.matricule = matricule;
+        this.indiceSal = indiceSal;
+
     }
 
     public void setNom(String nom) {
@@ -33,25 +35,36 @@ public class Employe {
     }
 
     public void setMatricule(String Matricule) {
-        this.Matricule = Matricule;
+        this.matricule = matricule;
     }
 
     public void setIndiceSal(int IndiceSal) {
-        this.IndiceSal = IndiceSal;
+        this.indiceSal = indiceSal;
     }
 
     public void setSalaire(int Salaire) {
-        this.Salaire = Salaire;
+        this.salaire = salaire;
     }
 
     public void setNbVente(int NbVente) {
-        this.NbVente = NbVente;
+        this.nbVente = nbVente;
     }
-
-
+    @Override
+    public double calculerSalaire() {
+        if (this instanceof Commercial) {
+            salaire = (int) (indiceSal * 12 + 0.1 * this.nbVente);
+        } else {
+            salaire = indiceSal * 12;
+        }
+        return 0;
+    }
     @Override
     public String toString() {
-        return "Employes{" + "nom=" + nom + ", prenom=" + prenom + ", Matricule=" + Matricule + ", IndiceSal=" + IndiceSal + ", Salaire=" + Salaire + ", NbVente=" + NbVente + '}';
+        return getClass().getSimpleName() + "nom=" + nom + ", prenom=" + prenom + ", matricule=" + matricule + ", indiceSal=" + indiceSal + ", salaire=" + salaire;
     }
-    
+
+
 }
+
+
+
