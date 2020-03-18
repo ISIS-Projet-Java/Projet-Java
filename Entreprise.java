@@ -19,6 +19,6 @@ public class Entreprise {
         
         membre.ajouterFichier();
         System.out.println(membre);
-    }
+     }
     
 }

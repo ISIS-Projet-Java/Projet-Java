@@ -23,6 +23,7 @@ public class Employe implements Payable {
         this.prenom = prenom;
         this.matricule = matricule;
         this.indiceSal = indiceSal;
+
     }
 
     public void setNom(String nom) {
@@ -64,5 +65,6 @@ public class Employe implements Payable {
 
 
 }
+
 
 

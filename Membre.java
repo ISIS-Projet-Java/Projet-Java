@@ -24,12 +24,12 @@ public class Membre {
 
     public Membre() {
         lesEmployes = new HashSet<Employe>();
+
     }
 
     public void ajouter(Employe g) {
         lesEmployes.add(g);
     }
-
     public void ajouterFichier() {
         Scanner scan = null;
         try {
@@ -66,4 +66,5 @@ public class Membre {
     public String toString() {
         return "Membres de l'entreprise =" + lesEmployes + '}';
     }
+
 }
