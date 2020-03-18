@@ -11,8 +11,8 @@ package entreprise;
  */
 public class EmployeDeBase extends Responsable {
     
-    public EmployeDeBase(String nom, String prenom, String Matricule, int IndiceSal) {
-        super(nom, prenom, Matricule, IndiceSal);
+    public EmployeDeBase(String nom, String prenom, String matricule, int indiceSal) {
+        super(nom, prenom, matricule, indiceSal);
     }
 
     
