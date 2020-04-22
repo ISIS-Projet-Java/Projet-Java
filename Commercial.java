@@ -9,18 +9,28 @@ package entreprise;
  *
  * @author cgay
  */
-public class Commercial extends Employe{
+public class Commercial extends Employe {
     
-    public Commercial(String nom, String prenom, String matricule, int indiceSal, int nombreDeVente) {
-        super(nom, prenom, matricule, indiceSal);
-        this.nbVente = nombreDeVente;
+    private int volumeVente;
+    
+      public Commercial(String nom, String prenom, String matricule, int indiceSalarial, int volumeVente) {
+        super(nom, prenom, matricule, indiceSalarial);
+        this.volumeVente=volumeVente;
+    }
+      
+    @Override
+    public String toString(){
+        return super.toString() + ", Volume mensuel de vente : " + volumeVente;
     }
 
     @Override
-    public String toString() {
-        return super.toString()+",nb de vente"+nbVente ;
-
+    public void CalculerSalaire(){
+        Salaire = (int)(indiceSalarial * 12 + 0.1 * volumeVente);
     }
     
-   
+    public void setVolumeVente(int volumeVente) {
+        this.volumeVente = volumeVente;
+    }
+    
+    
 }

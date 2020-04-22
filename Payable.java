@@ -11,6 +11,5 @@ package entreprise;
  * @author colin
  */
 public interface Payable {
-        public abstract double calculerSalaire();
-        
+    public void CalculerSalaire(Employe e);        
 }

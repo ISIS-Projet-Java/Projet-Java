@@ -9,11 +9,13 @@ package entreprise;
  *
  * @author cgay
  */
-public class EmployeDeBase extends Responsable {
+public class EmployeDeBase extends Employe {
     
-    public EmployeDeBase(String nom, String prenom, String matricule, int indiceSal) {
-        super(nom, prenom, matricule, indiceSal);
+    public EmployeDeBase(String nom, String prenom, String matricule, int indiceSalarial) {
+        super(nom, prenom, matricule, indiceSalarial);
     }
-
     
+    public void CalculerSalaire(){
+        Salaire = indiceSalarial * 12;
+    }
 }

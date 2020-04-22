@@ -5,32 +5,22 @@
  */
 package entreprise;
 
-import java.util.TreeSet;
+import java.util.HashSet;
 
 /**
  *
  * @author cgay
  */
-public class Responsable extends Employe{
+public class Responsable extends Employe {
     
-    public Responsable(String nom, String prenom, String matricule, int indiceSal) {
-        super(nom, prenom, matricule, indiceSal);
+    public Responsable(String nom, String prenom, String matricule, int indiceSalarial) {
+        super(nom, prenom, matricule, indiceSalarial);
     }
-    private TreeSet<Employe> lesSousEmployes;
-    /*
-        @Override
-    public String toString() {
-        return "Responsable{" + "lesSousEmployes=" + lesSousEmployes + '}';
+    
+    public void CalculerSalaire(){
+        Salaire = indiceSalarial * 12;
     }
-
-    public TreeSet<Employe> getLesSousEmployes() {
-        return lesSousEmployes;
-    }
-
-    public void setLesSousEmployes(TreeSet<Employe> lesSousEmployes) {
-        this.lesSousEmployes = lesSousEmployes;
-    }
-*/
-
-
+    
+    private HashSet<Employe> lesSousEmployes;
+    
 }
