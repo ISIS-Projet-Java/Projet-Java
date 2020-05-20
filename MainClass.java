@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entreprise;
+package Version2;
 
 /**
  *
- * @author frede
+ * @author Salomé Chevailler
  */
 public class MainClass {
 

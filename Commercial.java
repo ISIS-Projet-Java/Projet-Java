@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entreprise;
+package Version2;
 
 /**
  *
- * @author cgay
+ * @author Salomé Chevailler
  */
 public class Commercial extends Employe {
     
@@ -18,14 +18,12 @@ public class Commercial extends Employe {
         this.volumeVente=volumeVente;
     }
       
-    @Override
     public String toString(){
         return super.toString() + ", Volume mensuel de vente : " + volumeVente;
     }
 
-    @Override
-    public void CalculerSalaire(){
-        Salaire = (int)(indiceSalarial * 12 + 0.1 * volumeVente);
+    public void calculerSalaire(){
+        salaire = (int)(indiceSalarial * 12 + 0.1 * volumeVente);
     }
     
     public void setVolumeVente(int volumeVente) {

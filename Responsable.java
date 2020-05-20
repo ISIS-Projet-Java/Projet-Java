@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entreprise;
+package Version2;
 
 import java.util.HashSet;
 
 /**
  *
- * @author cgay
+ * @author Salomé Chevailler
  */
 public class Responsable extends Employe {
     
@@ -17,8 +17,8 @@ public class Responsable extends Employe {
         super(nom, prenom, matricule, indiceSalarial);
     }
     
-    public void CalculerSalaire(){
-        Salaire = indiceSalarial * 12;
+    public void calculerSalaire(){
+        salaire = indiceSalarial * 12;
     }
     
     private HashSet<Employe> lesSousEmployes;

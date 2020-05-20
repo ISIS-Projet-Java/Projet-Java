@@ -3,19 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entreprise;
+package Version2;
 
 import java.util.Objects;
+
 /**
  *
- * @author cgay
+ * @author Salomé Chevailler
  */
-public abstract class Employe implements Payable {
-   protected String nom;
+public abstract class Employe {
+
+    protected String nom;
     protected String prenom;
     protected String matricule;
     protected int indiceSalarial;
-    protected int Salaire;
+    protected int salaire;
 
     public Employe(String nom, String prenom, String matricule, int indiceSalarial) {
         this.nom = nom;
@@ -24,13 +26,12 @@ public abstract class Employe implements Payable {
         this.indiceSalarial = indiceSalarial;
     }
 
-   @Override
     public String toString() {
         return "Employés {" + "Nom : " + nom + ", Prénom : " + prenom + ", Matricule : " + matricule + "}";
 
     }
     
-    public abstract void CalculerSalaire();
+    public abstract void calculerSalaire();
     
 
     public void setNom(String nom) {
@@ -70,7 +71,7 @@ public abstract class Employe implements Payable {
         if (this.indiceSalarial != other.indiceSalarial) {
             return false;
         }
-        if (this.Salaire != other.Salaire) {
+        if (this.salaire != other.salaire) {
             return false;
         }
         if (!Objects.equals(this.nom, other.nom)) {
@@ -89,5 +90,3 @@ public abstract class Employe implements Payable {
     
 
 }
-
-

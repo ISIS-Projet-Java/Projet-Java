@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entreprise;
+package Version2;
 
 /**
  *
- * @author cgay
+ * @author Salomé Chevailler
  */
 public class EmployeDeBase extends Employe {
     
@@ -15,7 +15,7 @@ public class EmployeDeBase extends Employe {
         super(nom, prenom, matricule, indiceSalarial);
     }
     
-    public void CalculerSalaire(){
-        Salaire = indiceSalarial * 12;
+    public void calculerSalaire(){
+        salaire = indiceSalarial * 12;
     }
 }
