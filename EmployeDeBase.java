@@ -3,17 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entreprise;
+package Version2;
 
 /**
  *
- * @author cgay
+ * @author Salomé Chevailler
  */
-public class EmployeDeBase extends Responsable {
+public class EmployeDeBase extends Employe {
     
-    public EmployeDeBase(String nom, String prenom, String matricule, int indiceSal) {
-        super(nom, prenom, matricule, indiceSal);
+    public EmployeDeBase(String nom, String prenom, String matricule, int indiceSalarial) {
+        super(nom, prenom, matricule, indiceSalarial);
     }
-
     
+    public void calculerSalaire(){
+        salaire = indiceSalarial * 12;
+    }
 }
